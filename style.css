@@ -1,0 +1,80 @@
+* {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.vertical {
+    flex-direction: column !important;
+    align-content: space-around !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+}
+.not-vertical {
+    flex-direction: row !important;
+    align-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-around !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow-x: auto !important;
+}
+.vertical button {
+    font-size: 16px !important;
+}
+.not-vertical button {
+    font-size: 14px !important;
+    padding: 0px 15px !important;
+}
+#img {
+    background-image: url("https://images.unsplash.com/photo-1496871455396-14e56815f1f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGVkaXRpbmclMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.input {
+    position: relative !important;
+    width: 90% !important;
+    height: 40px;
+}
+.pop-up {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 172px;
+    font-weight: 300 !important;
+    background-color: rgba(19, 19, 19, 0.699);
+    color: white;
+    z-index: 999999999999;
+}
+.animation {
+    animation-name: pop-up;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@media (max-width: 992px) {
+    .pop-up {
+        font-size: 72px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Files -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Photo-Editor</title>
+</head>
+<body>
+    <div id="pop-up" class="pop-up d-none"></div>
+    <section class="container-fluid">
+        <div class="row flex-wrap">
+            <div id="work-space" class="d-flex justify-content-center align-content-end flex-wrap col-lg-10 col-12 m-0 p-0">
+                <div id="img" class="w-100 h-100"></div>
+                <input id="value" type="range" class="input" min="-1" max="400" value="-1">
+            </div>
+            <aside id="tools" class="d-flex col-lg-2 col-12 m-0 p-0 bg-light tools justify-content-end align-items-end">
+                <div class="d-flex bg-dark vertical not-vertical">
+                    <button onclick="addEffect('blur')" class="bg-transparent border-0 text-light text-nowrap">blur</button>
+                    <button onclick="addEffect('brightness')" class="bg-transparent border-0 text-light text-nowrap">brightness</button>
+                    <button onclick="addEffect('grayscale')" class="bg-transparent border-0 text-light text-nowrap">grayscale</button>
+                    <button onclick="addEffect('hueRotate')" class="bg-transparent border-0 text-light text-nowrap">hueRotate</button>
+                    <button onclick="addEffect('invert')" class="bg-transparent border-0 text-light text-nowrap">invert</button>
+                    <button onclick="addEffect('opacity')" class="bg-transparent border-0 text-light text-nowrap">opacity</button>
+                    <button onclick="addEffect('saturate')" class="bg-transparent border-0 text-light text-nowrap">saturate</button>
+                    <button onclick="addEffect('sepia')" class="bg-transparent border-0 text-light text-nowrap">sepia</button>
+                    <button onclick="addEffect('contrast')" class="bg-transparent border-0 text-light text-nowrap">contrast</button>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
